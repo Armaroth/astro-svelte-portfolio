@@ -9,20 +9,14 @@ function toggleMenu() {
 </script>
 
 <header class=" text-white border border-solid border-hex-gold-400">
-
      <section class="container mx-auto flex items-center justify-between p-4">
-
-        <h1 class=" text-hex-gold-100 text-2xl font-bold">Stefanos Palaiochoritis</h1>
-
+        <h1 class=" text-hex-gold-100 text-2xl font-bold">SP</h1>
         <nav class="hidden md:flex space-x-6">
             <a href="#" on:click={(e)=>e.preventDefault()} class="hover:text-hex-gold-400">Home</a>
             <a href="#" on:click={(e)=>e.preventDefault()} class="hover:text-hex-gold-400">About</a>
             <a href="#" on:click={(e)=>e.preventDefault()} class="hover:text-hex-gold-400">Projects</a>
             <a href="#" on:click={(e)=>e.preventDefault()}  class="hover:text-hex-gold-400">Contact</a>
         </nav>
-
-
-
 <button
 on:click={toggleMenu}
         class="block md:hidden focus:outline-none"

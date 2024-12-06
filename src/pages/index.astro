@@ -3,13 +3,16 @@
 // is your "component frontmatter". It never runs in the browser.
 import "./styles/global.css";
 import Header from "../pages/components/Header.svelte"
+import Main from "../pages/components/Main.svelte"
+
 console.log('This runs in your terminal, not the browser!');
 ---
 <!-- Below is your "component template." It's just HTML, but with
     some magic sprinkled in to help you build great templates. -->
 <html>
-  <body class="bg-hex-blue-400">
+  <body class="bg-hex-blue-400 flex flex-col gap-y-20">
     <Header  client:load/>
+    <Main/>
   </body>
 </html>
 <style>
