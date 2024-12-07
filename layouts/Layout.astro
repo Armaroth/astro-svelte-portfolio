@@ -1,0 +1,16 @@
+---
+import Header from "../src/pages/components/Header.svelte"
+const { title } = Astro.props;
+---
+
+<html lang="en">
+<head>
+  <title>{title}</title>
+</head>
+<body >
+<Header  client:load/>
+  <main>
+    <slot />  
+  </main>
+</body>
+</html>
