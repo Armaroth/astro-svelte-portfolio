@@ -1,6 +1,6 @@
 <script>
     // Add any script logic here if necessary
-</script>
+    </script>
 
 <main class="text-hex-gold-100 mx-auto flex flex-col-reverse lg:flex-row gap-8 lg:gap-x-40 items-center px-4">
     <section class="container flex flex-col gap-y-4 lg:gap-y-5 items-start text-center lg:text-left">
@@ -13,7 +13,19 @@
     </section>
     <section class="container flex justify-center lg:justify-start">
         <img
-            src="/assets/images/stefos.jpg"
+            loading="lazy"
+            srcset="
+            /assets/images/stefos-default.webp 160w,
+            /assets/images/stefos-small.webp 240w,
+            /assets/images/stefos-large.webp 320w,
+            /assets/images/stefos-xl.webp 384w
+            "
+            sizes="
+                (max-width: 640px) 160px,
+                (max-width: 1024px) 240px,
+                (max-width: 1280px) 320px,
+                384px
+            "
             class="h-40 sm:h-60 lg:h-80 xl:h-96 rounded-full border border-solid border-4 border-hex-gold-400"
             alt="Stefanos"
         />

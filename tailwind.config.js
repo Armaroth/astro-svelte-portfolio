@@ -12,9 +12,9 @@ export default {
         "hex-gold-100": "#F0E6D2",
         "hex-gold-400": "#C89B3C",
       },
-      backgroundImage: {
-        "custom-bg": "url('/assets/images/stefos.jpg')",
-      },
+      // backgroundImage: {
+      //   custom: "url('/assets/images/stefos.jpg')",
+      // },
     },
   },
   plugins: [],
