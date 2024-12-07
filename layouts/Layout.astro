@@ -1,16 +1,10 @@
 ---
-import Header from "../src/pages/components/Header.svelte"
-const { title } = Astro.props;
+import Header from '../components/Header.svelte';
+const lang = Astro.url.pathname.split('/')[1] || "en";
 ---
 
-<html lang="en">
-<head>
-  <title>{title}</title>
-</head>
-<body >
-<Header  client:load/>
-  <main>
-    <slot />  
-  </main>
-</body>
+<html lang={lang}>
+  <body>
+  <slot></slot>
+  </body>
 </html>
