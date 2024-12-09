@@ -4,10 +4,10 @@
   function switchLanguage(newLang) {
     const url = new URL(window.location.href);
     url.searchParams.set("lang", newLang);
-    parameter;
     window.location.href = url.toString();
   }
 </script>
+
 <button
   class="cursor-pointer mr-4"
   on:click={() => switchLanguage(lang === "en" ? "gr" : "en")}
