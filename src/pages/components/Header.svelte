@@ -8,7 +8,9 @@
   }
 </script>
 
-<header class=" text-white border border-solid border-hex-gold-400 flex">
+<header
+  class=" text-white border border-solid border-hex-gold-400 flex sticky top-0"
+>
   <section class="container mx-auto flex items-center justify-between p-4">
     <h1 class=" text-hex-gold-100 text-2xl font-bold">SP</h1>
     <nav class="hidden md:flex space-x-6">

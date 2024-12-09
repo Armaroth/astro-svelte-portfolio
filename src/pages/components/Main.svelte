@@ -9,17 +9,17 @@
   <section
     class="container flex flex-col gap-y-4 lg:gap-y-5 items-start text-center lg:text-left"
   >
-    <h2 class="text-2xl lg:text-3xl xl:text-4xl text-hex-gold-400">
+    <h2 class="text-2xl lg:text-3xl xl:text-3xl text-hex-gold-400">
       {text.name}
     </h2>
-    <h3 class="text-lg lg:text-xl xl:text-2xl">
+    <h3 class="text-lg lg:text-xl">
       {text.tag}
     </h3>
     <h3 class="text-m lg:text-l xl:text-2=xl">{text.based}</h3>
     <button
       class="bg-hex-blue-300 hover:bg-hex-blue-200 text-white font-bold py-2 px-4 rounded text-sm lg:text-base"
     >
-      {text.download_cv}
+      {text.downloadCv}
     </button>
   </section>
   <section class="container flex justify-center lg:justify-start">

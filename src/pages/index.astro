@@ -1,9 +1,10 @@
 ---
-// Welcome to Astro! Everything between these triple-dash code fences
-// is your "component frontmatter". It never runs in the browser.
 import "./styles/global.css";
 import Header from "../pages/components/Header.svelte"
 import Main from "../pages/components/Main.svelte"
+import PersonalInfo from "../pages/components/PersonalInfo.svelte"
+import Project from "../pages/components/Project.svelte"
+
 title: 'My Homepage'
 import {translations} from '../translations'
 const expectedLanguages=['en','gr']
@@ -11,11 +12,8 @@ const url = new URL(Astro.request.url);
 const langInput= url.searchParams.get('lang')||'en'
 const lang =expectedLanguages.includes(langInput)?langInput:'en';
 const cp= translations[lang]
-console.log(lang);
 ---
 
-<!-- Below is your "component template." It's just HTML, but with
-    some magic sprinkled in to help you build great templates. -->
       <html>
         <head>
             <meta charset="UTF-8" />
@@ -23,6 +21,15 @@ console.log(lang);
         <body  class="flex flex-col gap-y-20 bg-hex-blue-400">
          <Header lang={lang}  client:load/>
           <Main text={cp.main}/>
+          <PersonalInfo text={cp.personal}/>
+          <section class="mb-10 flex flex-col gap-10 mx-auto">
+            <h1 class="text-hex-gold-400 text-3xl block">Projects:</h1>
+            <Project project={cp.projects[0]}/>
+            <Project project={cp.projects[1]}/>
+            <Project project={cp.projects[2]}/>
+          </section>
+
+          
         </body>
         </html>
         <style>
