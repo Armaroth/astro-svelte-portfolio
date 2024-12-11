@@ -5,6 +5,7 @@
 
   function toggleMenu() {
     isMenuOpen = !isMenuOpen;
+    console.log("cx");
   }
 </script>
 
@@ -42,7 +43,7 @@
       >
     </nav>
     <button
-      on:click={toggleMenu}
+      on:click={() => toggleMenu()}
       class="block md:hidden focus:outline-none flex self-end"
       aria-label="Toggle Menu"
     >
