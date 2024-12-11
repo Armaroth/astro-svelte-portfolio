@@ -1,4 +1,5 @@
 ---
+// import "../../pages/styles/global.css";
 import "@styles/global.css"
 import Header from "@components/Header.svelte";
 import Intro from "@components/Intro.svelte";
@@ -6,8 +7,7 @@ import Details from "@components/Details.astro";
 import Project from "@components/Project.svelte";
 import ContactForm from "@components/ContactForm.svelte";
 import { fetchTranslations } from "@utils/translation.js";
-
-const locale = Astro.currentLocale||'en'
+const locale = Astro.currentLocale||'en';
 const content= await fetchTranslations(locale);
 ---
   <html>
@@ -17,7 +17,7 @@ const content= await fetchTranslations(locale);
       <meta name="description" content="Portfolio page of web developer Stefanos Palaiochoritis">
       <title>Stefanos Palaiochoritis</title>
     </head>
-    <body  class=" bg-hex-blue-300 sm:p-7 md:p-14 lg:p-20">
+    <body class=" bg-hex-blue-300 sm:p-7 md:p-14 lg:p-20">
       <section class="flex flex-col gap-y-20 bg-hex-blue-400 sm:rounded-xl ">
         <Header lang={locale} header={content.header} client:load/>
         <Intro text={content.main} client:load/>

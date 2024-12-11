@@ -1,15 +1,15 @@
 <script>
   export let lang;
-  function switchLanguage(newLang) {
-    const url = new URL(window.location.href);
-    url.searchParams.set("lang", newLang);
-    window.location.href = url.toString();
+  export function switchLanguage(lang) {
+    const url = new URL(window.location.href); // Get the current URL
+    url.pathname = lang; // Set the new path
+    window.location.href = url.toString(); // Navigate to the updated URL
   }
 </script>
 
 <button
   class="cursor-pointer mr-4m"
-  on:click={() => switchLanguage(lang === "en" ? "gr" : "en")}
+  on:click={() => switchLanguage(lang === "en" ? "gr" : "")}
 >
   {#if lang === "en"}
     <svg

@@ -1,0 +1,64 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+
+  "main": {
+    "name": "Stefanos Palaiochoritis",
+    "tag": "Web developer, code enthusiast!",
+    "location": "Based in Athens",
+    "downloadCv": "Download My CV!"
+  },
+  "details": {
+    "info": {
+      "heading": "A few things about me",
+      "content": "I have been working as a police officer for ten years and for, the past two years, I'mtrying to build a profile to transition into web development.   Through my occupation as a police officer, I have developed a strong sense of teamwork and adaptability. I highly value respect for others and I always work        towards cultivating a positive work environment. At a basic level, I consider myself profcient with JavaScript/Typescript alongside various JavaScript libraries like React, Vue, ExpressJS. I am confdent in my ability to contribute effectively as part of a team and am eager to bring my skills to use."
+    },
+    "futureGoals": {
+      "heading": "Future goals",
+      "content": "In five years, I aspire to be a seasoned industry professional, contributing to a company with a vision I deeply believe in—one that fosters a healthy and supportive work environment. My goal is to apply and refine my skills in meaningful ways, achieving a sense of accomplishment and driving continuous growth both personally and professionally"
+    },
+
+    "interviewTakeaway": {
+      "heading": "Interview takeaway",
+      "content": "What stood out to me during the interview was Web Eleven's approach to treating each business as a living organism, nurturing it with the care and resources needed to help it thrive—perfectly aligned with the company's inspiring motto, 'Make it bloom.' I also deeply appreciated the emphasis on employee well-being, particularly the opportunity to work in a flexible, hybrid environment that supports both productivity and balance."
+    }
+  },
+  "projects": [
+    {
+      "title": "Regional Pricing API",
+      "techStackHeading": "Tech stack",
+
+      "description": "The scope of this project was to implement a web API that given an IP address determines the pricing of Moby IT services. The app caches an IP-to-country map using Redis and uses an external service to determine the country of a user.",
+      "techStack": ["Deno"],
+      "link": "https://github.com/moby-it/regional-pricing"
+    },
+    {
+      "title": "Gaming Grids",
+      "techStackHeading": "Tech stack",
+
+      "description": "Gaming Grids is a browser-based immaculate grid game that is League-of-Legends themed.The rules are the same as any immaculate grid, but the restrictions and results relate to League of Legends champions. The project is still in progress. The project is developed in collaboration with George Spanos and Faraz Barbar. ",
+      "techStack": ["Nuxt", "Supabase"],
+      "link": "https://github.com/moby-it/gaming-grids"
+    },
+    {
+      "title": "Frontend-MovieRama",
+      "techStackHeading": "Tech stack",
+      "description": "MovieRama is a web application that fetches and displays movie data from The Movie Database (TMDB) API. The app allows users to view movies currently playing in theaters, search for a specific movie, fetch the next movies page using infinite scrolling and see detailed information about individual movies, including related videos, reviews, and similar movies.",
+      "techStack": ["html", "css", "typescript"],
+      "link": "https://github.com/Armaroth/frontend-MovieRama-Stef_Palaiochoritis"
+    }
+  ],
+  "contact": {
+    "heading": "Contact me",
+    "labels": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message"
+    },
+    "button": "Send"
+  }
+}

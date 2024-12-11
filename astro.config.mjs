@@ -6,4 +6,12 @@ export default defineConfig({
   integrations: [tailwind(), svelte()],
   output: "server",
   adapter: node({ mode: "standalone" }),
+  i18n: {
+    locales: ["gr", "en"],
+    defaultLocale: "en",
+    fallbackLng: "en",
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
 });

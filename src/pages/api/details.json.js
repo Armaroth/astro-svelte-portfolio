@@ -1,11 +1,11 @@
-import { translations } from "../../translations.js";
+import { fetchTranslations } from "../../utils/translation.js";
 export async function GET({ request }) {
   const url = new URL(request.url);
   const lang = url.searchParams.get("lang");
-  const content = translations[lang].details;
+  const content = await fetchTranslations(lang);
   return new Response(
     JSON.stringify({
-      content: content,
+      content: content.details,
     })
   );
 }

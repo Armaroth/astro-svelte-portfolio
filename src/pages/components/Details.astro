@@ -3,6 +3,7 @@ const { lang} = Astro.props;
 const origin = Astro.url?.origin || "http://localhost:3000";
 const {content:details}= await fetch(`${origin}/api/details.json/?lang=${lang}`).then(data=>data.json());
 ---
+<!-- <h1 class="text-white">hi</h1> -->
 <article class="bg-hex-blue-400 px-4 sm:px-8 lg:px-16 py-8 bg-gray-50 text-hex-gold-100 max-w-4xl mx-auto space-y-8">
   <section class=" space-y-4">
       <h2 class="text-2xl sm:text-3xl font-semibold text-hex-gold-400">

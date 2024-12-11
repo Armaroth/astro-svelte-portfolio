@@ -1,9 +1,8 @@
 <script>
-  import Language from "./Language.svelte";
+  import Language from "@components/Language.svelte";
   export let lang;
   export let header;
   let isMenuOpen = false;
-
   function toggleMenu() {
     isMenuOpen = !isMenuOpen;
   }
@@ -62,7 +61,6 @@
         />
       </svg>
     </button>
-
     {#if isMenuOpen}
       <nav class="md:hidden absolute top-full right-0 z-10 bg-hex-blue-400">
         <ul class="flex flex-col space-y-4 p-4">
