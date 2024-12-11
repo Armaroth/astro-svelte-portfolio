@@ -1,10 +1,16 @@
 <script>
+  import { inview } from "svelte-inview";
   export let project;
+  let isInView = false;
 </script>
 
 <section
-  class="bg-hex-blue-400 text-white p-6 rounded-lg shadow-md shadow-hex-blue-300 max-w-80 hover:shadow-lg hover:shadow-hex-blue-200 hover:-translate-y-1 transition
-sm:-max-w-sm md:max-w-xl lg:max-w-3xl"
+  use:inview={{ unobserveOnEnter: true, rootMargin: "-300px" }}
+  on:inview_change={({ detail }) => {
+    isInView = detail.inView;
+  }}
+  class={`bg-hex-blue-400 text-white p-6 rounded-lg shadow-md shadow-hex-blue-300 max-w-80 hover:shadow-lg hover:shadow-hex-blue-200 hover:-translate-y-1 transition duration-500	
+sm:-max-w-sm md:max-w-xl lg:max-w-3xl ${isInView ? "" : " opacity-0 -translate-x-20 "}`}
 >
   <h2 class="text-2xl font-semibold mb-2">
     {project.title}
@@ -22,7 +28,6 @@ sm:-max-w-sm md:max-w-xl lg:max-w-3xl"
       </span>
     {/each}
   </section>
-
   <a
     href={project.link}
     target="_blank"

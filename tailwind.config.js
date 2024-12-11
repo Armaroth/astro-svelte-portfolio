@@ -12,9 +12,10 @@ export default {
         "hex-gold-100": "#F0E6D2",
         "hex-gold-400": "#C89B3C",
       },
-      // backgroundImage: {
-      //   custom: "url('/assets/images/stefos.jpg')",
-      // },
+      transitionDuration: {
+        1500: "1500ms",
+        2000: "2000ms",
+      },
     },
   },
   plugins: [],

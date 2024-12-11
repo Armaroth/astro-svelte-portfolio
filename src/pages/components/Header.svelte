@@ -10,7 +10,7 @@
 </script>
 
 <header
-  class="text-white border-b border-solid border-hex-gold-400 flex sticky top-0 bg-hex-blue-400"
+  class="text-white border-b border-solid border-hex-gold-400 flex sticky top-0 bg-hex-blue-400 z-10 rounded-t-xl"
 >
   <section
     class="container relative mx-auto flex items-center justify-between p-4"

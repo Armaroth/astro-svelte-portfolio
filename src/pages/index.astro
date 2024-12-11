@@ -1,15 +1,17 @@
 ---
 import "./styles/global.css";
-import Header from "../pages/components/Header.svelte"
-import Intro from "../pages/components/Intro.astro"
-import Details from "../pages/components/Details.astro"
-import Project from "../pages/components/Project.svelte"
-import ContactForm from "../pages/components/ContactForm.svelte"
-import {translations} from '../translations'
+import Header from "../pages/components/Header.svelte";
+import Intro from "../pages/components/Intro.svelte";
+import Details from "../pages/components/Details.astro";
+import Project from "../pages/components/Project.svelte";
+import ContactForm from "../pages/components/ContactForm.svelte";
+import {translations} from '../translations';
+
 const url = new URL(Astro.request.url);
 const langInput= url.searchParams.get('lang');
 const lang =  translations[langInput]? langInput:'en'
-const content= translations[lang]
+const content= translations[lang];
+
 ---
       <html>
         <head>
@@ -18,17 +20,19 @@ const content= translations[lang]
              <meta name="description" content="Portfolio page of web developer Stefanos Palaiochoritis">
             <title>Stefanos Palaiochoritis</title>
         </head>
-        <body  class="flex flex-col gap-y-20 bg-hex-blue-400">
-         <Header lang={lang} header={content.header} client:load/>
-          <Intro text={content.main}/>
-          <Details lang={lang}/>
-          <section class="mb-10 flex flex-col gap-10 mx-auto">
-            <h1 class="text-hex-gold-400 text-3xl block">Projects:</h1>
-            <Project project={content.projects[0]}/>
-            <Project project={content.projects[1]}/>
-            <Project project={content.projects[2]}/>
-            <!-- see all projects button -->
+        <body  class=" bg-hex-blue-300 sm:p-7 md:p-14 lg:p-20">
+          <section class="flex flex-col gap-y-20 bg-hex-blue-400 rounded-xl ">
+            <Header lang={lang} header={content.header} client:load/>
+          <Intro text={content.main} client:load/>
+            <Details lang={lang}/>
+            <section class="mb-10 flex flex-col gap-20 mx-auto">
+              <h1 class="text-hex-gold-400 text-3xl block">Projects:</h1>
+              <Project project={content.projects[0]} client:load />
+              <Project project={content.projects[1]} client:load/>
+              <Project project={content.projects[2]} client:load/>
+              <!-- see all projects button -->
+            </section>
+            <ContactForm labels={content.contact} client:load/>
           </section>
-          <ContactForm labels={content.contact}/>
         </body>
         </html>

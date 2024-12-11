@@ -1,16 +1,21 @@
 <script>
-  // No functionality needed for the form
+  import { inview } from "svelte-inview";
   export let labels;
+  let isInView = false;
 </script>
 
 <section
-  class="mx-auto px-4 py-8 border border-solid border-hex-blue-300 container max-w-xs sm:max-w-xl lg:max-w-3xl mb-6"
+  use:inview={{ rootMargin: "-100px" }}
+  on:inview_change={({ detail }) => {
+    isInView = detail.inView;
+  }}
+  class={`mx-auto px-4 py-8 border border-solid border-hex-blue-300 container max-w-xs sm:max-w-lg lg:max-w-3xl mb-20 transition  duration-1000	
+  ${isInView ? "" : " translate-y-20 opacity-0"} `}
 >
   <section class="rounded-lg shadow-md p-6">
     <h1 class="text-2xl font-bold text-center mb-6 text-hex-gold-400">
       {labels.heading}
     </h1>
-
     <form action="#" method="POST" class="space-y-4">
       <section>
         <label for="name" class="block text-sm font-medium text-hex-gold-400"
@@ -38,7 +43,6 @@
           required
         />
       </section>
-
       <section>
         <label for="message" class="block text-sm font-medium text-hex-gold-400"
           >{labels.labels.message}</label
