@@ -6,7 +6,6 @@ import Details from "@components/Details.astro";
 import Project from "@components/Project.svelte";
 import ContactForm from "@components/ContactForm.svelte";
 import { fetchTranslations } from "@utils/translation.js";
-
 const locale = Astro.currentLocale||'en'
 const content= await fetchTranslations(locale);
 ---
@@ -14,7 +13,12 @@ const content= await fetchTranslations(locale);
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="Portfolio page of web developer Stefanos Palaiochoritis">
+      <meta name="description" content="Καλώς ήρθατε στο portfolio μου! Εδώ μπορείτε να μάθετε περισσότερα για εμένα, να εξερευνήσετε τα έργα που έχω δημιουργήσει και να επικοινωνήσετε εύκολα μαζί μου. Από καινοτόμες διαδικτυακές εφαρμογές μέχρι δημιουργικές σχεδιαστικές λύσεις, αυτός ο ιστότοπος παρουσιάζει τις δεξιότητές μου και το πάθος μου για την ανάπτυξη ιστοσελίδων. Ας συνεργαστούμε για να φέρουμε τις ιδέες στη ζωή!">
+       <meta name="twitter:card" content="example_image.webp" />
+      <meta name="twitter:title" content="My Web Developer Portfolio" />
+      <meta name="twitter:description" content="Explore my portfolio and projects." />
+      <meta name="twitter:image" content="https://examplePage.com/images/portfolio-image.jpg" />
+      <meta name="twitter:creator" content="@exampleTwitterhandle" />
       <title>Stefanos Palaiochoritis</title>
     </head>
     <body  class=" bg-hex-blue-300 sm:p-7 md:p-14 lg:p-20">

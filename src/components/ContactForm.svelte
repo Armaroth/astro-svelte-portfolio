@@ -4,7 +4,7 @@
   let isInView = false;
 </script>
 
-<section
+<footer
   use:inview={{ rootMargin: "-100px" }}
   on:inview_change={({ detail }) => {
     isInView = detail.inView;
@@ -66,4 +66,4 @@
       </section>
     </form>
   </section>
-</section>
+</footer>

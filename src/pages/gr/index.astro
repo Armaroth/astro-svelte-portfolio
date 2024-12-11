@@ -1,5 +1,4 @@
 ---
-// import "../../pages/styles/global.css";
 import "@styles/global.css"
 import Header from "@components/Header.svelte";
 import Intro from "@components/Intro.svelte";
@@ -14,8 +13,14 @@ const content= await fetchTranslations(locale);
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="Portfolio page of web developer Stefanos Palaiochoritis">
-      <title>Stefanos Palaiochoritis</title>
+      <meta name="description" content="Welcome to my portfolio! Here, you can learn more about me, explore the projects I've worked on, and easily get in touch. From innovative web applications to creative design solutions, this site showcases my skills and passion for web development. Let’s connect and bring ideas to life!"/>
+       <meta name="twitter:card" content="example_image.webp" />
+      <meta name="twitter:title" content="Το πορτφόλιο μου" />
+      <meta name="twitter:description" content="Εξερευνήστε το πορτόφλιο και τα προτζεκτ μου." />
+      <meta name="twitter:image" content="https://examplePage.com/images/portfolio-image.jpg" />
+      <meta name="twitter:creator" content="@exampleTwitterhandle" />
+      <meta name="keywords" content="προγραμματισμός, ιστοσελίδες, front-end, back-end, javascript" /> 
+      <title>Στέφανος Παλαιοχωρίτης</title>
     </head>
     <body class=" bg-hex-blue-300 sm:p-7 md:p-14 lg:p-20">
       <section class="flex flex-col gap-y-20 bg-hex-blue-400 sm:rounded-xl ">
