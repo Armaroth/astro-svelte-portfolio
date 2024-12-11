@@ -9,10 +9,6 @@ import { fetchTranslations } from "@utils/translation.js";
 const locale = Astro.currentLocale||'en'
 const content= await fetchTranslations(locale);
 
-
-
-const{ translations} = Astro.props;
-console.log(translations,'s')
 ---
 
 
