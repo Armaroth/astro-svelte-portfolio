@@ -8,7 +8,6 @@ import ContactForm from "@components/ContactForm.svelte";
 import { fetchTranslations } from "@utils/translation.js";
 const locale = Astro.currentLocale||'en'
 const content= await fetchTranslations(locale);
-import Layout from "../layouts/Layout.astro";
 
 
 
@@ -31,7 +30,6 @@ console.log(translations,'s')
     <title>Stefanos Palaiochoritis</title>
   </head>
   <body class=" bg-hex-blue-300 sm:p-7 md:p-14 lg:p-20">
-      <Layout>
       <section class="flex flex-col gap-y-20 bg-hex-blue-400 sm:rounded-xl ">
         <Header lang={locale} header={content.header} client:load/>
         <Intro text={content.main} client:load/>
@@ -44,6 +42,5 @@ console.log(translations,'s')
         </section>
         <ContactForm labels={content.contact} client:load/>
       </section>
-    </Layout>
     </body>
     </html>
