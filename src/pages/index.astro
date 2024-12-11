@@ -8,7 +8,8 @@ import ContactForm from "../pages/components/ContactForm.svelte"
 import {translations} from '../translations'
 const url = new URL(Astro.request.url);
 const langInput= url.searchParams.get('lang');
-const cp= translations[langInput]||translations['en'];
+const lang =  translations[langInput]? langInput:'en'
+const content= translations[lang]
 ---
       <html>
         <head>
@@ -18,16 +19,16 @@ const cp= translations[langInput]||translations['en'];
             <title>Stefanos Palaiochoritis</title>
         </head>
         <body  class="flex flex-col gap-y-20 bg-hex-blue-400">
-         <Header lang={translations[langInput]?langInput:'en'} header={cp.header} client:load/>
-          <Intro text={cp.main}/>
-          <Details text={cp.personal}/>
+         <Header lang={lang} header={content.header} client:load/>
+          <Intro text={content.main}/>
+          <Details lang={lang}/>
           <section class="mb-10 flex flex-col gap-10 mx-auto">
             <h1 class="text-hex-gold-400 text-3xl block">Projects:</h1>
-            <Project project={cp.projects[0]}/>
-            <Project project={cp.projects[1]}/>
-            <Project project={cp.projects[2]}/>
+            <Project project={content.projects[0]}/>
+            <Project project={content.projects[1]}/>
+            <Project project={content.projects[2]}/>
             <!-- see all projects button -->
           </section>
-          <ContactForm labels={cp.contact}/>
+          <ContactForm labels={content.contact}/>
         </body>
         </html>

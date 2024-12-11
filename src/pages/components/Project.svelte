@@ -3,7 +3,7 @@
 </script>
 
 <section
-  class="bg-hex-blue-400 text-white p-6 rounded-lg shadow-md shadow-hex-blue-300 max-w-80 hover:shadow-lg hover:shadow-hex-blue-200 transition-shadow
+  class="bg-hex-blue-400 text-white p-6 rounded-lg shadow-md shadow-hex-blue-300 max-w-80 hover:shadow-lg hover:shadow-hex-blue-200 hover:-translate-y-1 transition
 sm:-max-w-sm md:max-w-xl lg:max-w-3xl"
 >
   <h2 class="text-2xl font-semibold mb-2">
@@ -12,7 +12,7 @@ sm:-max-w-sm md:max-w-xl lg:max-w-3xl"
   <p class="text-sm sm:text-base mb-4">
     {project.description}
   </p>
-  <h3 class="mb-3">Tech Stack:</h3>
+  <h3 class="mb-3">{project.techStackHeading}:</h3>
   <section class="flex flex-wrap gap-2 mb-4">
     {#each project.techStack as tech}
       <span

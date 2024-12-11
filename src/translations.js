@@ -13,7 +13,7 @@ export const translations = {
       location: "Based in Athens",
       downloadCv: "Download My CV!",
     },
-    personal: {
+    details: {
       info: {
         heading: `A few things about me`,
         content: `I have been working as a police offcer for ten years and for, the past two years, I'm
@@ -39,6 +39,8 @@ contribute effectively as part of a team and am eager to bring my skills to use.
     projects: [
       {
         title: "Regional Pricing API",
+        techStackHeading: "Tech stack",
+
         description: `The scope of this project was to implement a web API that given an IP address
 determines the pricing of Moby IT services. The app caches an IP-to-country map
 using Redis and uses an external service to determine the country of a user.`,
@@ -47,6 +49,8 @@ using Redis and uses an external service to determine the country of a user.`,
       },
       {
         title: "Gaming Grids",
+        techStackHeading: "Tech stack",
+
         description: `Gaming Grids is a browser-based immaculate grid game that is League-of-Legends
 themed.The rules are the same as any immaculate grid, but the restrictions and results relate to
 League of Legends champions. The project is still in progress. The project is developed
@@ -56,6 +60,7 @@ in collaboration with George Spanos and Faraz Barbar. `,
       },
       {
         title: "Frontend-MovieRama",
+        techStackHeading: "Tech stack",
         description: `MovieRama is a web application that fetches and displays movie data from The Movie Database (TMDB) API. The app allows users to view movies currently playing in theaters, search for a specific movie, fetch the next movies page using infinite scrolling and see detailed information about individual movies, including related videos, reviews, and similar movies.`,
         techStack: ["html", "css", "typescript"],
         link: "https://github.com/Armaroth/frontend-MovieRama-Stef_Palaiochoritis",
@@ -75,7 +80,7 @@ in collaboration with George Spanos and Faraz Barbar. `,
     header: {
       home: "Αρχική",
       about: "Σχετικά με εμένα",
-      projects: "Πρότεκτ",
+      projects: "Πρότζεκτ",
       contact: "Επικοινωνία",
     },
     main: {
@@ -84,7 +89,7 @@ in collaboration with George Spanos and Faraz Barbar. `,
       location: "Βασισμένος στην Αθήνα",
       downloadCv: "Κατεβάστε το βιογραφικό μου!",
     },
-    personal: {
+    details: {
       info: {
         heading: `Λίγα λόγια για εμένα`,
         content: `Έχω εργαστεί ως αστυνομικός για δέκα χρόνια και, τα τελευταία δύο χρόνια, προσπαθώ να δημιουργήσω ένα προφίλ για να μεταβώ στον τομέα της ανάπτυξης ιστού.
@@ -104,6 +109,7 @@ in collaboration with George Spanos and Faraz Barbar. `,
     projects: [
       {
         title: "Regional Pricing API",
+        techStackHeading: "Τεχνολογίες",
         description: `Το αντικείμενο αυτού του έργου ήταν η υλοποίηση ενός web API που, δεδομένης μιας διεύθυνσης IP, καθορίζει την τιμολόγηση των υπηρεσιών της Moby IT.
 Η εφαρμογή αποθηκεύει προσωρινά έναν χάρτη IP-σε-χώρα χρησιμοποιώντας το Redis και χρησιμοποιεί μια εξωτερική υπηρεσία για να προσδιορίσει τη χώρα του χρήστη.`,
         techStack: ["Deno"],
@@ -111,6 +117,8 @@ in collaboration with George Spanos and Faraz Barbar. `,
       },
       {
         title: "Gaming Grids",
+        techStackHeading: "Τεχνολογίες",
+
         description: `
 Το Gaming Grids είναι ένα παιχνίδι immaculate grid που βασίζεται σε περιηγητή και έχει θεματολογία από το League of Legends.
 Οι κανόνες είναι ίδιοι με αυτούς κάθε immaculate grid, αλλά οι περιορισμοί και τα αποτελέσματα σχετίζονται με τους ήρωες του League of Legends.
@@ -120,6 +128,7 @@ in collaboration with George Spanos and Faraz Barbar. `,
       },
       {
         title: "Frontend-MovieRama",
+        techStackHeading: "Τεχνολογίες",
         description: `
 Το MovieRama είναι μια διαδικτυακή εφαρμογή που αντλεί και προβάλλει δεδομένα ταινιών από το API του The Movie Database (TMDB).
 Η εφαρμογή επιτρέπει στους χρήστες να βλέπουν ταινίες που παίζονται αυτή τη στιγμή στους κινηματογράφους, να αναζητούν συγκεκριμένες ταινίες, να φορτώνουν την επόμενη σελίδα ταινιών με τη χρήση infinite scrolling και να βλέπουν λεπτομερείς πληροφορίες για μεμονωμένες ταινίες, συμπεριλαμβανομένων σχετικών βίντεο, κριτικών και παρόμοιων ταινιών.`,
