@@ -9,7 +9,7 @@
 </script>
 
 <button
-  class="cursor-pointer mr-4"
+  class="cursor-pointer mr-4m"
   on:click={() => switchLanguage(lang === "en" ? "gr" : "en")}
 >
   {#if lang === "en"}

@@ -56,6 +56,15 @@ in collaboration with George Spanos and Faraz Barbar. `,
         link: "https://github.com/Armaroth/frontend-MovieRama-Stef_Palaiochoritis",
       },
     ],
+    contact: {
+      heading: "Contact me",
+      labels: {
+        name: "Name",
+        email: "Email",
+        message: "Message",
+      },
+      button: "Send",
+    },
   },
   gr: {
     main: {
@@ -107,5 +116,14 @@ in collaboration with George Spanos and Faraz Barbar. `,
         link: "https://github.com/Armaroth/frontend-MovieRama-Stef_Palaiochoritis",
       },
     ],
+    contact: {
+      heading: "Επικοινωνήστε μαζί μου",
+      labels: {
+        name: "Όνομα",
+        email: "Ηλεκτονική διεύθυνση",
+        message: "Μήνυμα",
+      },
+      button: "Αποστολή",
+    },
   },
 };

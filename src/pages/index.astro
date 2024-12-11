@@ -4,6 +4,8 @@ import Header from "../pages/components/Header.svelte"
 import Main from "../pages/components/Main.svelte"
 import PersonalInfo from "../pages/components/PersonalInfo.svelte"
 import Project from "../pages/components/Project.svelte"
+import ContactForm from "../pages/components/ContactForm.svelte"
+
 
 title: 'My Homepage'
 import {translations} from '../translations'
@@ -28,6 +30,7 @@ const cp= translations[lang]
             <Project project={cp.projects[1]}/>
             <Project project={cp.projects[2]}/>
           </section>
+          <ContactForm labels={cp.contact}/>
 
           
         </body>

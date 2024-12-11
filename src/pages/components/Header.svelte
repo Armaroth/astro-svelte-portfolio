@@ -9,10 +9,16 @@
 </script>
 
 <header
-  class=" text-white border border-solid border-hex-gold-400 flex sticky top-0"
+  class="text-white border-b border-solid border-hex-gold-400 flex sticky top-0 bg-hex-blue-400"
 >
-  <section class="container mx-auto flex items-center justify-between p-4">
-    <h1 class=" text-hex-gold-100 text-2xl font-bold">SP</h1>
+  <section
+    class="container relative mx-auto flex items-center justify-between p-4"
+  >
+    <section class="flex gap-x-3">
+      <h1 class=" text-hex-gold-100 text-2xl font-bold">SP</h1>
+      <Language {lang} />
+    </section>
+
     <nav class="hidden md:flex space-x-6">
       <a
         href="#"
@@ -37,7 +43,7 @@
     </nav>
     <button
       on:click={toggleMenu}
-      class="block md:hidden focus:outline-none"
+      class="block md:hidden focus:outline-none flex self-end"
       aria-label="Toggle Menu"
     >
       <svg
@@ -55,40 +61,44 @@
         />
       </svg>
     </button>
+
+    {#if isMenuOpen}
+      <nav class="md:hidden absolute top-full right-0 z-10">
+        <ul class="flex flex-col space-y-4 p-4">
+          <li class=" ">
+            <a
+              href="#"
+              on:click={(e) => e.preventDefault()}
+              class="hover:text-hex-gold-400 border-b border-b-solid hover:border-b-hex-gold-400"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              on:click={(e) => e.preventDefault()}
+              class="hover:text-hex-gold-400 border-b border-b-solid hover:border-b-hex-gold-400"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              on:click={(e) => e.preventDefault()}
+              class="hover:text-hex-gold-400 border-b border-b-solid hover:border-b-hex-gold-400"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              on:click={(e) => e.preventDefault()}
+              class="hover:text-hex-gold-400 hover:border-b hover:border-b-solid hover:border-b-hex-gold-400"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    {/if}
   </section>
-  {#if isMenuOpen}
-    <nav class="md:hidden bg-hex-blue-400">
-      <ul class="flex flex-col space-y-4 p-4">
-        <li>
-          <a
-            href="#"
-            on:click={(e) => e.preventDefault()}
-            class="hover:text-hex-gold-400">Home</a
-          >
-        </li>
-        <li>
-          <a
-            href="#"
-            on:click={(e) => e.preventDefault()}
-            class="hover:text-hex-gold-400">About</a
-          >
-        </li>
-        <li>
-          <a
-            href="#"
-            on:click={(e) => e.preventDefault()}
-            class="hover:text-hex-gold-400">Projects</a
-          >
-        </li>
-        <li>
-          <a
-            href="#"
-            on:click={(e) => e.preventDefault()}
-            class="hover:text-hex-gold-400">Contact</a
-          >
-        </li>
-      </ul>
-    </nav>
-  {/if}
-  <Language {lang} />
 </header>
