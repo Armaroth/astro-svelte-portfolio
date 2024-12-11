@@ -8,10 +8,7 @@ import ContactForm from "@components/ContactForm.svelte";
 import { fetchTranslations } from "@utils/translation.js";
 const locale = Astro.currentLocale||'en'
 const content= await fetchTranslations(locale);
-
 ---
-
-
 
 <html>
   <head>
