@@ -18,7 +18,7 @@ const cp= translations[langInput]||translations['en'];
             <title>Stefanos Palaiochoritis</title>
         </head>
         <body  class="flex flex-col gap-y-20 bg-hex-blue-400">
-         <Header lang={translations[langInput]?langInput:'en'} client:load/>
+         <Header lang={translations[langInput]?langInput:'en'} header={cp.header} client:load/>
           <Intro text={cp.main}/>
           <Details text={cp.personal}/>
           <section class="mb-10 flex flex-col gap-10 mx-auto">

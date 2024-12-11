@@ -9,13 +9,11 @@ sm:-max-w-sm md:max-w-xl lg:max-w-3xl"
   <h2 class="text-2xl font-semibold mb-2">
     {project.title}
   </h2>
-
   <p class="text-sm sm:text-base mb-4">
     {project.description}
   </p>
-
   <h3 class="mb-3">Tech Stack:</h3>
-  <div class="flex flex-wrap gap-2 mb-4">
+  <section class="flex flex-wrap gap-2 mb-4">
     {#each project.techStack as tech}
       <span
         class=" text-hex-gold-400 px-2 py-1 rounded-full border border-solid border-hex-gold-400 text-xs sm:text-sm font-medium"
@@ -23,7 +21,7 @@ sm:-max-w-sm md:max-w-xl lg:max-w-3xl"
         {tech}
       </span>
     {/each}
-  </div>
+  </section>
 
   <a
     href={project.link}

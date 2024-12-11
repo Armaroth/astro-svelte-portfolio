@@ -1,7 +1,12 @@
-import { description, url } from "@valibot/valibot";
-
 export const translations = {
   en: {
+    header: {
+      home: "Home",
+      about: "About",
+      projects: "Projects",
+      contact: "Contact",
+    },
+
     main: {
       name: "Stefanos Palaiochoritis",
       tag: "Web developer, code enthusiast!",
@@ -67,6 +72,12 @@ in collaboration with George Spanos and Faraz Barbar. `,
     },
   },
   gr: {
+    header: {
+      home: "Αρχική",
+      about: "Σχετικά με εμένα",
+      projects: "Πρότεκτ",
+      contact: "Επικοινωνία",
+    },
     main: {
       name: "Στέφανος Παλαιοχωρίτης",
       tag: "Προγραμματιστής, λάτρης του κώδικα!",

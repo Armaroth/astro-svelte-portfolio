@@ -4,12 +4,12 @@
 </script>
 
 <section
-  class="mx-auto px-4 py-8 border border-solid border-hex-blue-300 container max-w-xs sm:max-w-xl lg:max-w-3xl"
+  class="mx-auto px-4 py-8 border border-solid border-hex-blue-300 container max-w-xs sm:max-w-xl lg:max-w-3xl mb-6"
 >
   <section class="rounded-lg shadow-md p-6">
-    <h2 class="text-2xl font-bold text-center mb-6 text-hex-gold-400">
+    <h1 class="text-2xl font-bold text-center mb-6 text-hex-gold-400">
       {labels.heading}
-    </h2>
+    </h1>
 
     <form action="#" method="POST" class="space-y-4">
       <section>

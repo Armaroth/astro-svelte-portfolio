@@ -1,11 +1,11 @@
 <script>
   import Language from "./Language.svelte";
   export let lang;
+  export let header;
   let isMenuOpen = false;
 
   function toggleMenu() {
     isMenuOpen = !isMenuOpen;
-    console.log("cx");
   }
 </script>
 
@@ -24,22 +24,22 @@
       <a
         href="#"
         on:click={(e) => e.preventDefault()}
-        class="hover:text-hex-gold-400">Home</a
+        class="hover:text-hex-gold-400">{header.home}</a
       >
       <a
         href="#"
         on:click={(e) => e.preventDefault()}
-        class="hover:text-hex-gold-400">About</a
+        class="hover:text-hex-gold-400">{header.about}</a
       >
       <a
         href="#"
         on:click={(e) => e.preventDefault()}
-        class="hover:text-hex-gold-400">Projects</a
+        class="hover:text-hex-gold-400">{header.projects}</a
       >
       <a
         href="#"
         on:click={(e) => e.preventDefault()}
-        class="hover:text-hex-gold-400">Contact</a
+        class="hover:text-hex-gold-400">{header.contact}</a
       >
     </nav>
     <button
@@ -64,14 +64,14 @@
     </button>
 
     {#if isMenuOpen}
-      <nav class="md:hidden absolute top-full right-0 z-10">
+      <nav class="md:hidden absolute top-full right-0 z-10 bg-hex-blue-400">
         <ul class="flex flex-col space-y-4 p-4">
           <li class=" ">
             <a
               href="#"
               on:click={(e) => e.preventDefault()}
               class="hover:text-hex-gold-400 border-b border-b-solid hover:border-b-hex-gold-400"
-              >Home</a
+              >{header.home}</a
             >
           </li>
           <li>
@@ -79,7 +79,7 @@
               href="#"
               on:click={(e) => e.preventDefault()}
               class="hover:text-hex-gold-400 border-b border-b-solid hover:border-b-hex-gold-400"
-              >About</a
+              >{header.about}</a
             >
           </li>
           <li>
@@ -87,15 +87,15 @@
               href="#"
               on:click={(e) => e.preventDefault()}
               class="hover:text-hex-gold-400 border-b border-b-solid hover:border-b-hex-gold-400"
-              >Projects</a
+              >{header.projects}</a
             >
           </li>
           <li>
             <a
               href="#"
               on:click={(e) => e.preventDefault()}
-              class="hover:text-hex-gold-400 hover:border-b hover:border-b-solid hover:border-b-hex-gold-400"
-              >Contact</a
+              class="hover:text-hex-gold-400 border-b border-b-solid hover:border-b-hex-gold-400"
+              >{header.contact}</a
             >
           </li>
         </ul>

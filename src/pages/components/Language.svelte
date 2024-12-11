@@ -1,5 +1,4 @@
 <script>
-  let loading = true;
   export let lang;
   function switchLanguage(newLang) {
     const url = new URL(window.location.href);
