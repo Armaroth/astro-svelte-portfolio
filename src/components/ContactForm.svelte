@@ -56,7 +56,6 @@
           required
         ></textarea>
       </section>
-
       <section>
         <button
           type="submit"

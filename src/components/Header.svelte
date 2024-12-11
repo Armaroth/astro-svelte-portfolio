@@ -11,37 +11,52 @@
 <header
   class="text-white border-b border-solid border-hex-gold-400 flex sticky top-0 bg-hex-blue-400 z-10 rounded-t-xl"
 >
-  <section
-    class="container relative mx-auto flex items-center justify-between p-4"
-  >
+  <section class="container relative flex items-center justify-between p-4">
     <section class="flex gap-x-3">
       <h1 class=" text-hex-gold-100 text-2xl font-bold">
         {lang === "gr" ? "ΣΠ" : "SP"}
       </h1>
       <Language {lang} />
     </section>
-
-    <nav class="hidden md:flex space-x-6">
-      <a
-        href="#"
-        on:click={(e) => e.preventDefault()}
-        class="hover:text-hex-gold-400">{header.home}</a
+    <nav
+      class={` ${!isMenuOpen && "hidden"} md:block absolute md:relative top-full md:top-0 right-0 bg-hex-blue-400`}
+    >
+      <ul
+        class="flex flex-col justify-center items-end md:flex-row md:p-0 p-4 gap-3"
       >
-      <a
-        href="#"
-        on:click={(e) => e.preventDefault()}
-        class="hover:text-hex-gold-400">{header.about}</a
-      >
-      <a
-        href="#"
-        on:click={(e) => e.preventDefault()}
-        class="hover:text-hex-gold-400">{header.projects}</a
-      >
-      <a
-        href="#"
-        on:click={(e) => e.preventDefault()}
-        class="hover:text-hex-gold-400">{header.contact}</a
-      >
+        <li class=" ">
+          <a
+            href="#"
+            on:click={(e) => e.preventDefault()}
+            class="hover:text-hex-gold-400 border-b border-b-solid md:border-0 hover:border-b-hex-gold-400"
+            >{header.home}</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            on:click={(e) => e.preventDefault()}
+            class="hover:text-hex-gold-400 border-b border-b-solid md:border-0 hover:border-b-hex-gold-400"
+            >{header.about}</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            on:click={(e) => e.preventDefault()}
+            class="hover:text-hex-gold-400 border-b border-b-solid md:border-0 hover:border-b-hex-gold-400"
+            >{header.projects}</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            on:click={(e) => e.preventDefault()}
+            class="hover:text-hex-gold-400 border-b border-b-solid md:border-0 hover:border-b-hex-gold-400"
+            >{header.contact}</a
+          >
+        </li>
+      </ul>
     </nav>
     <button
       on:click={() => toggleMenu()}
@@ -63,43 +78,5 @@
         />
       </svg>
     </button>
-    {#if isMenuOpen}
-      <nav class="md:hidden absolute top-full right-0 z-10 bg-hex-blue-400">
-        <ul class="flex flex-col space-y-4 p-4">
-          <li class=" ">
-            <a
-              href="#"
-              on:click={(e) => e.preventDefault()}
-              class="hover:text-hex-gold-400 border-b border-b-solid hover:border-b-hex-gold-400"
-              >{header.home}</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              on:click={(e) => e.preventDefault()}
-              class="hover:text-hex-gold-400 border-b border-b-solid hover:border-b-hex-gold-400"
-              >{header.about}</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              on:click={(e) => e.preventDefault()}
-              class="hover:text-hex-gold-400 border-b border-b-solid hover:border-b-hex-gold-400"
-              >{header.projects}</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              on:click={(e) => e.preventDefault()}
-              class="hover:text-hex-gold-400 border-b border-b-solid hover:border-b-hex-gold-400"
-              >{header.contact}</a
-            >
-          </li>
-        </ul>
-      </nav>
-    {/if}
   </section>
 </header>

@@ -1,0 +1,27 @@
+---
+import { fetchTranslations } from "../utils/translation.js";
+
+// Get the current locale
+const locale = Astro.currentLocale || "en";
+
+// Fetch translations
+const translations = await fetchTranslations(locale);
+
+const { title } = Astro.props; // Page-specific props
+// console.log(translations)
+console.log('xxx')
+---
+
+<html lang={locale}>
+  <head>
+    <title>{title || "Default Title"}</title>
+  </head>
+  <body>
+    <!-- <header class="p-4 bg-blue-600 text-white">
+      <h1>{translations.main.welcome}</h1>
+    </header> -->
+    <section>
+        <slot translations={translations}></slot>
+    </section>
+  </body>
+</html>

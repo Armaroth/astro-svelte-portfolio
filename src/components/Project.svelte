@@ -5,7 +5,7 @@
 </script>
 
 <section
-  use:inview={{ unobserveOnEnter: true, rootMargin: "-300px" }}
+  use:inview={{ unobserveOnEnter: true, rootMargin: "-200px" }}
   on:inview_change={({ detail }) => {
     isInView = detail.inView;
   }}
