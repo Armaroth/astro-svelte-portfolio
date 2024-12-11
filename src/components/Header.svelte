@@ -15,7 +15,9 @@
     class="container relative mx-auto flex items-center justify-between p-4"
   >
     <section class="flex gap-x-3">
-      <h1 class=" text-hex-gold-100 text-2xl font-bold">SP</h1>
+      <h1 class=" text-hex-gold-100 text-2xl font-bold">
+        {lang === "gr" ? "ΣΠ" : "SP"}
+      </h1>
       <Language {lang} />
     </section>
 

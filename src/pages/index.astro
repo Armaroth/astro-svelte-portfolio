@@ -21,7 +21,7 @@ const content= await fetchTranslations(locale);
       <meta name="twitter:creator" content="@exampleTwitterhandle" />
       <title>Stefanos Palaiochoritis</title>
     </head>
-    <body  class=" bg-hex-blue-300 sm:p-7 md:p-14 lg:p-20">
+    <body class=" bg-hex-blue-300 sm:p-7 md:p-14 lg:p-20">
       <section class="flex flex-col gap-y-20 bg-hex-blue-400 sm:rounded-xl ">
         <Header lang={locale} header={content.header} client:load/>
         <Intro text={content.main} client:load/>
@@ -31,7 +31,6 @@ const content= await fetchTranslations(locale);
           <Project project={content.projects[0]} client:load />
           <Project project={content.projects[1]} client:load/>
           <Project project={content.projects[2]} client:load/>
-          <!-- see all projects button -->
         </section>
         <ContactForm labels={content.contact} client:load/>
       </section>

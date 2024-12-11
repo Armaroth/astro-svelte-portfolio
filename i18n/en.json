@@ -34,7 +34,8 @@
 
       "description": "The scope of this project was to implement a web API that given an IP address determines the pricing of Moby IT services. The app caches an IP-to-country map using Redis and uses an external service to determine the country of a user.",
       "techStack": ["Deno"],
-      "link": "https://github.com/moby-it/regional-pricing"
+      "link": "https://github.com/moby-it/regional-pricing",
+      "button": "View on Githbub"
     },
     {
       "title": "Gaming Grids",
@@ -42,14 +43,16 @@
 
       "description": "Gaming Grids is a browser-based immaculate grid game that is League-of-Legends themed.The rules are the same as any immaculate grid, but the restrictions and results relate to League of Legends champions. The project is still in progress. The project is developed in collaboration with George Spanos and Faraz Barbar. ",
       "techStack": ["Nuxt", "Supabase"],
-      "link": "https://github.com/moby-it/gaming-grids"
+      "link": "https://github.com/moby-it/gaming-grids",
+      "button": "View on Githbub"
     },
     {
       "title": "Frontend-MovieRama",
       "techStackHeading": "Tech stack",
       "description": "MovieRama is a web application that fetches and displays movie data from The Movie Database (TMDB) API. The app allows users to view movies currently playing in theaters, search for a specific movie, fetch the next movies page using infinite scrolling and see detailed information about individual movies, including related videos, reviews, and similar movies.",
       "techStack": ["html", "css", "typescript"],
-      "link": "https://github.com/Armaroth/frontend-MovieRama-Stef_Palaiochoritis"
+      "link": "https://github.com/Armaroth/frontend-MovieRama-Stef_Palaiochoritis",
+      "button": "View on Githbub"
     }
   ],
   "contact": {

@@ -34,21 +34,24 @@
       "techStackHeading": "Τεχνολογίες",
       "description": "Το αντικείμενο αυτού του έργου ήταν η υλοποίηση ενός web API που, δεδομένης μιας διεύθυνσης IP, καθορίζει την τιμολόγηση των υπηρεσιών της Moby IT. Η εφαρμογή αποθηκεύει προσωρινά έναν χάρτη IP-σε-χώρα χρησιμοποιώντας το Redis και χρησιμοποιεί μια εξωτερική υπηρεσία για να προσδιορίσει τη χώρα του χρήστη.",
       "techStack": ["Deno"],
-      "link": "https://github.com/moby-it/regional-pricing"
+      "link": "https://github.com/moby-it/regional-pricing",
+      "button": "Δες το στο Github"
     },
     {
       "title": "Gaming Grids",
       "techStackHeading": "Τεχνολογίες",
       "description": "Το Gaming Grids είναι ένα παιχνίδι immaculate grid που βασίζεται σε ένα 3x3 παζλ  και έχει θεματολογία από το League of Legends. Οι κανόνες είναι ίδιοι με αυτούς κάθε immaculate grid, αλλά οι περιορισμοί και τα αποτελέσματα σχετίζονται με τους ήρωες του προαναφερθέντος Brand. Το έργο βρίσκεται ακόμα σε εξέλιξη και αναπτύσσεται σε συνεργασία με τον Γιώργο Σπανό και τον Faraz Barbar.",
       "techStack": ["Nuxt", "Supabase"],
-      "link": "https://github.com/moby-it/gaming-grids"
+      "link": "https://github.com/moby-it/gaming-grids",
+      "button": "Δες το στο Github"
     },
     {
       "title": "Frontend-MovieRama",
       "techStackHeading": "Τεχνολογίες",
       "description": "Το MovieRama είναι μια διαδικτυακή εφαρμογή που αντλεί και προβάλλει δεδομένα ταινιών από το API του The Movie Database (TMDB). Η εφαρμογή επιτρέπει στους χρήστες να βλέπουν ταινίες που παίζονται αυτή τη στιγμή στους κινηματογράφους, να αναζητούν συγκεκριμένες ταινίες, να φορτώνουν την επόμενη σελίδα ταινιών με τη χρήση infinite scrolling και να βλέπουν λεπτομερείς πληροφορίες για μεμονωμένες ταινίες, συμπεριλαμβανομένων σχετικών βίντεο, κριτικών και παρόμοιων ταινιών.",
       "techStack": ["html", "css", "typescript"],
-      "link": "https://github.com/Armaroth/frontend-MovieRama-Stef_Palaiochoritis"
+      "link": "https://github.com/Armaroth/frontend-MovieRama-Stef_Palaiochoritis",
+      "button": "Δες το στο Github"
     }
   ],
 

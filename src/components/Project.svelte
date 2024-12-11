@@ -11,9 +11,9 @@
   }}
   class={`bg-hex-blue-400 text-white p-6 rounded-lg shadow-md 
    shadow-hex-blue-300 max-w-xs sm:max-w-lg hover:shadow-xl hover:shadow-hex-blue-200 hover:-translate-y-2 transition duration-500	
-sm:-max-w-sm md:max-w-xl lg:max-w-3xl ${isInView ? "" : " opacity-0 -translate-x-20 "}`}
+sm:-max-w-sm md:max-w-xl lg:max-w-3xl ${isInView ? "" : " opacity-0 -translate-x-24 "}`}
 >
-  <h2 class="text-2xl font-semibold mb-2 text-hex-gold-400">
+  <h2 class="text-2xl font-semibold mb-2 text-hex-gold-300">
     {project.title}
   </h2>
   <p class="text-sm sm:text-base mb-4">
@@ -35,6 +35,6 @@ sm:-max-w-sm md:max-w-xl lg:max-w-3xl ${isInView ? "" : " opacity-0 -translate-x
     rel="noopener noreferrer"
     class="inline-block bg-hex-blue-300 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
   >
-    View Project
+    {project.button}
   </a>
 </section>
