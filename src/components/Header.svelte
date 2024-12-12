@@ -1,5 +1,7 @@
 <script>
-  import Language from "@components/Language.svelte";
+  import Link from "@components/Link.svelte";
+  import Gr from "@components/flags/Gr.svelte";
+  import En from "@components/flags/En.svelte";
   export let lang;
   export let header;
   let isMenuOpen = false;
@@ -12,11 +14,17 @@
   class="text-white border-b border-solid border-hex-gold-400 flex sticky top-0 bg-hex-blue-400 z-10 rounded-t-xl"
 >
   <section class="container relative flex items-center justify-between p-4">
-    <section class="flex gap-x-3">
+    <section class="flex gap-x-3 items-center">
       <h1 class=" text-hex-gold-100 text-2xl font-bold">
         {lang === "gr" ? "ΣΠ" : "SP"}
       </h1>
-      <Language {lang} />
+      <Link type="lang" to={lang === "en" ? "/gr" : "/"}>
+        {#if lang === "en"}
+          <En />
+        {:else}
+          <Gr />
+        {/if}
+      </Link>
     </section>
     <nav
       class={` ${!isMenuOpen && "hidden"} md:block absolute md:relative top-full md:top-0 right-0 bg-hex-blue-400`}

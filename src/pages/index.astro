@@ -22,13 +22,13 @@ const content= await fetchTranslations(locale);
     <meta name="twitter:creator" content="@exampleTwitterhandle" />
     <title>Stefanos Palaiochoritis</title>
   </head>
-  <body class=" bg-hex-blue-300 sm:p-7 md:p-14 lg:p-20">
+ <body class=" bg-hex-blue-300 sm:p-7 md:p-14 lg:p-20">
       <section class="flex flex-col gap-y-20 bg-hex-blue-400 sm:rounded-xl ">
         <Header lang={locale} header={content.header} client:load/>
-        <Intro text={content.main} client:load/>
+        <Intro intro={content.main} client:load/>
         <Details lang={locale}/>
         <section class="mb-10 flex flex-col gap-20 mx-auto">
-          <h1 class="text-hex-gold-400 text-3xl block">Projects:</h1>
+          <h1 class="text-hex-gold-400 text-3xl block">Πρότζεκτ:</h1>
           <Project project={content.projects[0]} client:load />
           <Project project={content.projects[1]} client:load/>
           <Project project={content.projects[2]} client:load/>

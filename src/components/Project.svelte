@@ -1,4 +1,5 @@
 <script>
+  import Link from "@components/Link.svelte";
   import { inview } from "svelte-inview";
   export let project;
   let isInView = false;
@@ -29,12 +30,5 @@ sm:-max-w-sm md:max-w-xl lg:max-w-3xl ${isInView ? "" : " opacity-0 -translate-x
       </span>
     {/each}
   </section>
-  <a
-    href={project.link}
-    target="_blank"
-    rel="noopener noreferrer"
-    class="inline-block bg-hex-blue-300 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
-  >
-    {project.button}
-  </a>
+  <Link to={project.link} type="button">{project.button}</Link>
 </section>
