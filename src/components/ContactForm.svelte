@@ -1,5 +1,6 @@
 <script>
   import { inview } from "svelte-inview";
+  import Button from "./Button.svelte";
   export let labels;
   let isInView = false;
 </script>
@@ -57,11 +58,13 @@
         ></textarea>
       </section>
       <section>
-        <button
+        <Button
           type="submit"
-          class="bg-hex-blue-300 block mx-auto text-white py-2 px-4 rounded-md hover:bg-hex-blue-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          >{labels.button}
-        </button>
+          onClick={(e) => {
+            e.preventDefault();
+            console.log("Contact form button is not functional.");
+          }}>{labels.button}</Button
+        >
       </section>
     </form>
   </section>

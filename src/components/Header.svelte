@@ -1,7 +1,9 @@
 <script>
   import Link from "@components/Link.svelte";
-  import Gr from "@components/flags/Gr.svelte";
-  import En from "@components/flags/En.svelte";
+  import Button from "./Button.svelte";
+  import Dropdown from "@components/icons/Dropdown.svelte";
+  import Gr from "@components/icons/Gr.svelte";
+  import En from "@components/icons/En.svelte";
   export let lang;
   export let header;
   let isMenuOpen = false;
@@ -11,7 +13,7 @@
 </script>
 
 <header
-  class="text-white border-b border-solid border-hex-gold-400 flex sticky top-0 bg-hex-blue-400 z-10 rounded-t-xl"
+  class="text-white border-b border-solid border-hex-gold-400 flex items-center sticky top-0 bg-hex-blue-400 z-10 rounded-t-xl"
 >
   <section class="container relative flex items-center justify-between p-4">
     <section class="flex gap-x-3 items-center">
@@ -32,59 +34,27 @@
       <ul
         class="flex flex-col justify-center items-end md:flex-row md:p-0 p-4 gap-3"
       >
-        <li class=" ">
-          <a
-            href="#"
-            on:click={(e) => e.preventDefault()}
-            class="hover:text-hex-gold-400 border-b border-b-solid md:border-0 hover:border-b-hex-gold-400"
-            >{header.home}</a
-          >
+        <li class="border-b md:border-0 hover:border-b-hex-gold-400">
+          <Link type="nav">{header.home}</Link>
         </li>
-        <li>
-          <a
-            href="#"
-            on:click={(e) => e.preventDefault()}
-            class="hover:text-hex-gold-400 border-b border-b-solid md:border-0 hover:border-b-hex-gold-400"
-            >{header.about}</a
-          >
+        <li class="border-b md:border-0 hover:border-b-hex-gold-400">
+          <Link type="nav">{header.about}</Link>
         </li>
-        <li>
-          <a
-            href="#"
-            on:click={(e) => e.preventDefault()}
-            class="hover:text-hex-gold-400 border-b border-b-solid md:border-0 hover:border-b-hex-gold-400"
-            >{header.projects}</a
-          >
+        <li class="border-b md:border-0 hover:border-b-hex-gold-400">
+          <Link type="nav">{header.projects}</Link>
         </li>
-        <li>
-          <a
-            href="#"
-            on:click={(e) => e.preventDefault()}
-            class="hover:text-hex-gold-400 border-b border-b-solid md:border-0 hover:border-b-hex-gold-400"
-            >{header.contact}</a
-          >
+        <li class="border-b md:border-0 hover:border-b-hex-gold-400">
+          <Link type="nav">{header.contact}</Link>
         </li>
       </ul>
     </nav>
-    <button
-      on:click={() => toggleMenu()}
-      class="block md:hidden focus:outline-none flex self-end"
-      aria-label="Toggle Menu"
+
+    <Button
+      onClick={() => toggleMenu()}
+      type="toggle"
+      classes="block md:hidden focus:outline-none flex"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
-        />
-      </svg>
-    </button>
+      <Dropdown {isMenuOpen} />
+    </Button>
   </section>
 </header>

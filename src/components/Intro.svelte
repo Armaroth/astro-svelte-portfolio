@@ -1,4 +1,5 @@
 <script>
+  import Button from "./Button.svelte";
   export let intro;
   let isInView = false;
   setTimeout(() => (isInView = true), 0);
@@ -10,18 +11,16 @@
   <section
     class={`container flex flex-col gap-y-4 lg:gap-y-5 items-start text-center lg:text-left transition duration-500 ${isInView ? "" : " opacity-0 -translate-x-20 "}`}
   >
-    <h2 class="text-2xl lg:text-3xl xl:text-3xl text-hex-gold-400">
+    <h1 class="text-2xl lg:text-3xl xl:text-3xl text-hex-gold-400">
       {intro.name}
-    </h2>
-    <h3 class="text-lg lg:text-xl">
+    </h1>
+    <h2 class="text-lg lg:text-xl">
       {intro.tag}
-    </h3>
-    <h3 class="text-m lg:text-l xl:text-2xl">{intro.based}</h3>
-    <button
-      class="bg-hex-blue-300 hover:bg-hex-blue-200 text-white font-bold py-2 px-4 rounded text-sm lg:text-base"
-    >
+    </h2>
+    <h2 class="text-m lg:text-l xl:text-2xl">{intro.based}</h2>
+    <Button onClick={() => console.log("download button not functional")}>
       {intro.downloadCv}
-    </button>
+    </Button>
   </section>
   <section class="container flex justify-center lg:justify-start">
     <img
