@@ -1,7 +1,4 @@
 ### web-eleven-assignment
-
-This a portfolio website created within the framework of an assesment by the Web-eleven company
-
 # Stefanos Palaiochoritis Portfolio
 
 Welcome to my portfolio! This is a web application built to showcase my skills, projects, and experience as a web developer. The application is built using **Astro**, **Svelte**, and **Tailwind CSS**, with full support for localization (English and Greek).
